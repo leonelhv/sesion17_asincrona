@@ -1,2 +1,89 @@
-<p>form works!</p>
-{{ id }}
+<div class="mx-auto">
+  <form class="form-horizontal" #formProducto="ngForm">
+    <fieldset>
+      <!-- Form Name -->
+      <legend>
+        PRODUCTO NRO:
+        <span class="text-primary fw-bold fs-2">{{ id | uppercase }}</span>
+      </legend>
+
+      <!-- Text input-->
+      <div class="form-group mb-3">
+        <label class="col-md-4 control-label" for="textinput"
+          >Código de Barras</label
+        >
+        <div class="col-md-4">
+          <input
+            id="textinput"
+            name="codigo"
+            type="text"
+            class="form-control input-md"
+            [(ngModel)]="producto.codigo"
+          />
+        </div>
+      </div>
+
+      <!-- Textarea -->
+      <div class="form-group mb-3">
+        <label class="col-md-4 control-label" for="textarea">Descripcion</label>
+        <div class="col-md-4">
+          <textarea
+            class="form-control"
+            id="textarea"
+            name="descripcion"
+            [(ngModel)]="producto.descripcion"
+          ></textarea>
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group mb-3">
+        <label class="col-md-4 control-label" for="textinput"
+          >Precio de Venta</label
+        >
+        <div class="col-md-4">
+          <input
+            id="textinput"
+            name="precio_venta"
+            type="text"
+            placeholder="placeholder"
+            class="form-control input-md"
+            [(ngModel)]="producto.precio_venta"
+          />
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group mb-3">
+        <label class="col-md-4 control-label" for="textinput"
+          >Precio de Compra</label
+        >
+        <div class="col-md-4">
+          <input
+            id="textinput"
+            name="precio_compra"
+            type="text"
+            placeholder="placeholder"
+            class="form-control input-md"
+            [(ngModel)]="producto.precio_compra"
+          />
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group mb-3">
+        <label class="col-md-4 control-label" for="textinput">Text Input</label>
+        <div class="col-md-4">
+          <input
+            id="textinput"
+            name="existencia"
+            type="text"
+            placeholder="placeholder"
+            class="form-control input-md"
+            [(ngModel)]="producto.existencia"
+          />
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>

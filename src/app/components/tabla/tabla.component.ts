@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { producto } from '../interface/producto.interface';
+import { Component } from '@angular/core';
+import { ProductoService } from 'src/app/services/producto.service';
+import { producto } from '../../interface/producto.interface';
 
 @Component({
   selector: 'app-tabla',
@@ -7,5 +8,9 @@ import { producto } from '../interface/producto.interface';
   styleUrls: ['./tabla.component.css'],
 })
 export class TablaComponent {
-  @Input() productos: producto[] = [];
+  productos: producto[] = [];
+
+  constructor(private productoService: ProductoService) {
+    this.productos = this.productoService.getProductos();
+  }
 }

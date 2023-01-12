@@ -9,19 +9,20 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       {
-        path: 'producto',
-        component: FormComponent,
-      },
-      {
         path: 'producto/:id',
         component: FormComponent,
       },
+
       {
         path: '**',
-        redirectTo: 'producto',
+        redirectTo: '',
         pathMatch: 'full',
       },
     ],
+  },
+  {
+    path: '**',
+    redirectTo: '',
   },
 ];
 
