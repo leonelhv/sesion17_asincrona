@@ -62,6 +62,18 @@ export class ProductoService {
     return this.productos.some((pro) => pro.id == id);
   }
   getProductoById(id: number) {
-    return [...this.productos].find((prod) => prod.id === id);
+    return Object.assign(
+      {},
+      this.productos.find((prod) => prod.id === id)
+    );
+  }
+  actualizarProducto(producto: producto) {
+    this.productos.map((prod) => {
+      if (prod.id == producto.id) {
+        Object.assign(prod, producto);
+        return prod;
+      }
+      return prod;
+    });
   }
 }
