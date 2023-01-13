@@ -1,104 +1,99 @@
-<div class="mx-auto">
+<div class="">
   <form class="form-horizontal" #formProducto="ngForm">
     <fieldset>
       <!-- Form Name -->
-      <legend class="d-flex align-items-center gap-2">
+      <legend class="d-flex justify-content-center align-items-center gap-2">
         PRODUCTO NRO:
         <span class="text-primary fw-bold fs-2">{{ id | uppercase }}</span>
       </legend>
+      <div>
+        <!-- Text input-->
+        <div class="form-group mb-3">
+          <label class="control-label" for="textinput">Código de Barras</label>
+          <div class="">
+            <input
+              required
+              id="textinput"
+              name="codigo"
+              type="number"
+              class="form-control input-md"
+              [(ngModel)]="producto.codigo"
+            />
+          </div>
+        </div>
 
-      <!-- Text input-->
-      <div class="form-group mb-3">
-        <label class="col-md-4 control-label" for="textinput"
-          >Código de Barras</label
-        >
-        <div class="col-md-4">
-          <input
-            required
-            id="textinput"
-            name="codigo"
-            type="number"
-            class="form-control input-md"
-            [(ngModel)]="producto.codigo"
-          />
+        <!-- Textarea -->
+        <div class="form-group mb-3">
+          <label class="control-label" for="textarea">Descripcion</label>
+          <div class="">
+            <textarea
+              class="form-control"
+              id="textarea"
+              name="descripcion"
+              [(ngModel)]="producto.descripcion"
+            ></textarea>
+          </div>
         </div>
-      </div>
+        <!-- Text input-->
+        <div class="form-group mb-3">
+          <label class="control-label" for="textinput">Precio de Compra</label>
+          <div class="">
+            <input
+              required
+              id="textinput"
+              name="precio_compra"
+              type="number"
+              placeholder="placeholder"
+              class="form-control input-md"
+              [(ngModel)]="producto.precio_compra"
+            />
+          </div>
+        </div>
+        <!-- Text input-->
+        <div class="form-group mb-3">
+          <label class="control-label" for="textinput">Precio de Venta</label>
+          <div class="">
+            <input
+              required
+              id="textinput"
+              name="precio_venta"
+              type="number"
+              placeholder="placeholder"
+              class="form-control input-md"
+              [(ngModel)]="producto.precio_venta"
+            />
+          </div>
+        </div>
 
-      <!-- Textarea -->
-      <div class="form-group mb-3">
-        <label class="col-md-4 control-label" for="textarea">Descripcion</label>
-        <div class="col-md-4">
-          <textarea
-            class="form-control"
-            id="textarea"
-            name="descripcion"
-            [(ngModel)]="producto.descripcion"
-          ></textarea>
+        <!-- Text input-->
+        <div class="form-group mb-3">
+          <label class="control-label" for="textinput">Ganancia</label>
+          <div class="">
+            <input
+              required
+              id="textinput"
+              name="ganancia"
+              type="number"
+              placeholder="placeholder"
+              class="form-control input-md"
+              [(ngModel)]="producto.ganancia"
+            />
+          </div>
         </div>
-      </div>
-      <!-- Text input-->
-      <div class="form-group mb-3">
-        <label class="col-md-4 control-label" for="textinput"
-          >Precio de Compra</label
-        >
-        <div class="col-md-4">
-          <input
-            required
-            id="textinput"
-            name="precio_compra"
-            type="number"
-            placeholder="placeholder"
-            class="form-control input-md"
-            [(ngModel)]="producto.precio_compra"
-          />
-        </div>
-      </div>
-      <!-- Text input-->
-      <div class="form-group mb-3">
-        <label class="col-md-4 control-label" for="textinput"
-          >Precio de Venta</label
-        >
-        <div class="col-md-4">
-          <input
-            required
-            id="textinput"
-            name="precio_venta"
-            type="number"
-            placeholder="placeholder"
-            class="form-control input-md"
-            [(ngModel)]="producto.precio_venta"
-          />
-        </div>
-      </div>
-
-      <!-- Text input-->
-      <div class="form-group mb-3">
-        <label class="col-md-4 control-label" for="textinput">Ganancia</label>
-        <div class="col-md-4">
-          <input
-            required
-            id="textinput"
-            name="ganancia"
-            type="number"
-            placeholder="placeholder"
-            class="form-control input-md"
-            [(ngModel)]="producto.ganancia"
-          />
-        </div>
-      </div>
-      <!-- Text input-->
-      <div class="form-group mb-3">
-        <label class="col-md-4 control-label" for="textinput">Existencia</label>
-        <div class="col-md-4">
-          <input
-            required
-            id="textinput"
-            name="existencia"
-            type="number"
-            placeholder="placeholder"
-            class="form-control input-md"
-            [(ngModel)]="producto.existencia"
-          />
+        <!-- Text input-->
+        <div class="form-group mb-3">
+          <label class="control-label" for="textinput">Existencia</label>
+          <div class="">
+            <input
+              required
+              id="textinput"
+              name="existencia"
+              type="number"
+              placeholder="placeholder"
+              class="form-control input-md"
+              [(ngModel)]="producto.existencia"
+            />
+          </div>
         </div>
       </div>
     </fieldset>
