@@ -30,5 +30,6 @@ export class FormComponent implements OnInit {
   }
   actualizar() {
     this.productoService.actualizarProducto(this.producto);
+    this.router.navigate(['']);
   }
 }

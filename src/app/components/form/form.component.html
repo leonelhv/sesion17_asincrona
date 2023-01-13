@@ -14,9 +14,10 @@
         >
         <div class="col-md-4">
           <input
+            required
             id="textinput"
             name="codigo"
-            type="text"
+            type="number"
             class="form-control input-md"
             [(ngModel)]="producto.codigo"
           />
@@ -35,7 +36,23 @@
           ></textarea>
         </div>
       </div>
-
+      <!-- Text input-->
+      <div class="form-group mb-3">
+        <label class="col-md-4 control-label" for="textinput"
+          >Precio de Compra</label
+        >
+        <div class="col-md-4">
+          <input
+            required
+            id="textinput"
+            name="precio_compra"
+            type="number"
+            placeholder="placeholder"
+            class="form-control input-md"
+            [(ngModel)]="producto.precio_compra"
+          />
+        </div>
+      </div>
       <!-- Text input-->
       <div class="form-group mb-3">
         <label class="col-md-4 control-label" for="textinput"
@@ -43,9 +60,10 @@
         >
         <div class="col-md-4">
           <input
+            required
             id="textinput"
             name="precio_venta"
-            type="text"
+            type="number"
             placeholder="placeholder"
             class="form-control input-md"
             [(ngModel)]="producto.precio_venta"
@@ -55,29 +73,28 @@
 
       <!-- Text input-->
       <div class="form-group mb-3">
-        <label class="col-md-4 control-label" for="textinput"
-          >Precio de Compra</label
-        >
+        <label class="col-md-4 control-label" for="textinput">Ganancia</label>
         <div class="col-md-4">
           <input
+            required
             id="textinput"
-            name="precio_compra"
-            type="text"
+            name="ganancia"
+            type="number"
             placeholder="placeholder"
             class="form-control input-md"
-            [(ngModel)]="producto.precio_compra"
+            [(ngModel)]="producto.ganancia"
           />
         </div>
       </div>
-
       <!-- Text input-->
       <div class="form-group mb-3">
-        <label class="col-md-4 control-label" for="textinput">Text Input</label>
+        <label class="col-md-4 control-label" for="textinput">Existencia</label>
         <div class="col-md-4">
           <input
+            required
             id="textinput"
             name="existencia"
-            type="text"
+            type="number"
             placeholder="placeholder"
             class="form-control input-md"
             [(ngModel)]="producto.existencia"
@@ -85,6 +102,13 @@
         </div>
       </div>
     </fieldset>
-    <button type="submit" (click)="actualizar()">actualizar</button>
+    <button
+      class="btn btn-primary"
+      type="submit"
+      (click)="actualizar()"
+      [disabled]="formProducto.invalid"
+    >
+      Actualizar
+    </button>
   </form>
 </div>
