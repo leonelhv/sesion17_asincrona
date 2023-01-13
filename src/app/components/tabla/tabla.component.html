@@ -1,26 +1,28 @@
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">#ID</th>
-      <th scope="col">Código</th>
-      <th scope="col">Descripción</th>
-      <th scope="col">Precio de compra</th>
-      <th scope="col">Precio de venta</th>
-      <th scope="col">Ganancia</th>
-      <th scope="col">Existencia</th>
-      <th scope="col">Editar</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let produc of productos">
-      <th scope="row">{{ produc.id }}</th>
-      <td>{{ produc.codigo }}</td>
-      <td>{{ produc.descripcion }}</td>
-      <td>{{ produc.precio_compra }}</td>
-      <td>{{ produc.precio_venta }}</td>
-      <td>{{ produc.ganancia }}</td>
-      <td>{{ produc.existencia }}</td>
-      <td><a [routerLink]="['/producto', produc.id]">✏</a></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#ID</th>
+        <th scope="col">Código</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Precio de compra</th>
+        <th scope="col">Precio de venta</th>
+        <th scope="col">Ganancia</th>
+        <th scope="col">Existencia</th>
+        <th scope="col">Editar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let produc of productos">
+        <th scope="row">{{ produc.id }}</th>
+        <td>{{ produc.codigo }}</td>
+        <td>{{ produc.descripcion }}</td>
+        <td>{{ produc.precio_compra }}</td>
+        <td>{{ produc.precio_venta }}</td>
+        <td>{{ produc.ganancia }}</td>
+        <td>{{ produc.existencia }}</td>
+        <td><a [routerLink]="['/producto', produc.id]">✏</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
