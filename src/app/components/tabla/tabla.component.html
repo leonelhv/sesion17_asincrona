@@ -18,9 +18,9 @@
         <th scope="row">{{ produc.id }}</th>
         <td>{{ produc.codigo }}</td>
         <td>{{ produc.descripcion }}</td>
-        <td>{{ produc.precio_compra | number : ".2" | currency : "S/" }}</td>
-        <td>{{ produc.precio_venta | number : ".2" | currency : "S/" }}</td>
-        <td>{{ produc.ganancia | number : ".2" | currency : "S/" }}</td>
+        <td>{{ produc.precio_compra | currency : "S/" }}</td>
+        <td>{{ produc.precio_venta | currency : "S/" }}</td>
+        <td>{{ produc.ganancia | currency : "S/" }}</td>
         <td>{{ produc.existencia }}</td>
         <td><a [routerLink]="['/producto', produc.id]">✏</a></td>
       </tr>
